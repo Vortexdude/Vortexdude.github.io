@@ -1,75 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-        }
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        .section p {
-            margin: 5px 0;
-        }
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin-bottom: 5px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nitin Namdev — DevOps Engineer</title>
+  <style>
+    :root{--accent:#0b74de;--muted:#6b7280;--maxw:800px}
+    body{font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,"Helvetica Neue",Arial;margin:0;background:#f7fafc;color:#0f172a}
+    .wrap{max-width:var(--maxw);margin:32px auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 8px 24px rgba(15,23,42,0.06)}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    h1{font-size:1.4rem;margin:0}
+    .role{color:var(--muted);font-weight:600}
+    .contact{font-size:0.9rem;color:var(--muted);text-align:right}
+    .section{margin-top:18px}
+    .section h2{font-size:0.95rem;margin:0 0 8px 0;color:var(--accent)}
+    p.summary{margin:0;color:#111827}
+    ul.skills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+    ul.skills li{background:#eef6ff;color:var(--accent);padding:6px 10px;border-radius:8px;font-weight:600;font-size:0.85rem}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .job{margin-bottom:12px}
+    .job h3{margin:0;font-size:1rem}
+    .meta{font-size:0.85rem;color:var(--muted);margin-bottom:6px}
+    .bullets{margin:0;padding-left:18px}
+    footer{margin-top:20px;font-size:0.85rem;color:var(--muted)}
+    @media(print){body{background:#fff}.wrap{box-shadow:none;border-radius:0}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Nitin Namdev</h1>
-            <p>DevOps Engineer</p>
-        </header>
-        <div class="section">
-            <h2>Contact Information</h2>
-            <p>Email: nitin.namdev@outlook.com</p>
-            <p>Phone: +91xxxxxxxxxx</p>
-            <p>Address: 123 Main Street, Mumbai, India</p>
-        </div>
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Science in Computer Science - University of Example (2015-2019)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li>Web Developer - ABC Company (2019-present)</li>
-                <li>Intern - XYZ Corporation (Summer 2018)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-            </ul>
-        </div>
-    </div>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Nitin Namdev</h1>
+        <div class="role">DevOps Engineer — 4+ years experience</div>
+      </div>
+      <div class="contact">
+        <div>your.email@example.com • +91 98765 43210</div>
+        <div>Location: Pune, India • <a href="#" target="_blank">github.com/yourhandle</a></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p class="summary">Practical and results-driven DevOps Engineer with 4+ years of experience designing, automating, and maintaining CI/CD pipelines, cloud infrastructure, and observability for production services. Skilled in containerization, infrastructure-as-code, and Linux system administration; passionate about reliability, security, and developer experience.</p>
+    </section>
+
+    <section class="section">
+      <h2>Core Skills</h2>
+      <ul class="skills">
+        <li>CI/CD: GitLab CI / Jenkins</li>
+        <li>Cloud: AWS (EC2, S3, EKS)</li>
+        <li>IaC: Terraform</li>
+        <li>Config Mgmt: Ansible</li>
+        <li>Containers: Docker, Kubernetes</li>
+        <li>Monitoring: Prometheus, Grafana</li>
+        <li>Logging: ELK / OpenSearch</li>
+        <li>Scripting: Bash, Python</li>
+        <li>VCS: Git</li>
+        <li>OS: Linux</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>DevOps Engineer — Acme Corp (example)</h3>
+        <div class="meta">Jul 2022 – Present • Pune, India</div>
+        <ul class="bullets">
+          <li>Designed and maintained GitLab CI pipelines for microservices, reducing deployment time by ~40% and enabling automated canary releases.</li>
+          <li>Built and operated Kubernetes clusters on AWS EKS, managing autoscaling, ingress, and network policies to improve reliability and security.</li>
+          <li>Implemented Terraform modules to provision reusable, audited infrastructure; reduced infrastructure drift and decreased provisioning time.</li>
+          <li>Instrumented services with Prometheus and Grafana; created dashboards and alerts that cut mean time to detection (MTTD) for production incidents.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Site Reliability Engineer — BetaTech (example)</h3>
+        <div class="meta">May 2021 – Jun 2022 • Remote</div>
+        <ul class="bullets">
+          <li>Automated routine ops tasks with Ansible and Python, saving ~10 hours/week of manual work across the team.</li>
+          <li>Managed CI builds and artifact promotion pipelines; stabilized releases by adding automated integration tests and image signing steps.</li>
+          <li>Led scale testing and capacity planning exercises to validate horizontal scaling strategies for stateful services.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>DevOps Engineer (Early Career)</h3>
+        <div class="meta">Jan 2020 – Apr 2021</div>
+        <ul class="bullets">
+          <li>Supported Linux infrastructure, troubleshooting networking and service issues; improved playbook coverage for common recovery tasks.</li>
+          <li>Helped containerize legacy apps and migrated CI jobs to container-based runners.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div>
+        <h2>Projects & Achievements</h2>
+        <ul class="bullets">
+          <li>Centralized observability: rolled out Prometheus + Grafana across 20+ services, created runbooks and automated alert routing.</li>
+          <li>Blue/Green and Canary deployments: implemented deployment strategies that reduced downtime during releases.</li>
+          <li>Cost optimization: analysed AWS spend and applied rightsizing + reserved instances, saving ~20% monthly on compute costs.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Education & Certs</h2>
+        <ul class="bullets">
+          <li>Bachelor of Engineering — Computer Science (Year), University Name</li>
+          <li>AWS Certified Solutions Architect – Associate (optional)</li>
+          <li>Certified Kubernetes Application Developer (CKAD) — (optional)</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>References available on request • Open to remote and hybrid roles</div>
+    </footer>
+  </div>
 </body>
 </html>
